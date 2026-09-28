@@ -1,191 +1,428 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Alistair Arokiaswamy | Market Research & Competitive Intelligence</title>
-
-<meta name="description" content="Alistair Arokiaswamy — Market Research, Competitive Intelligence, Market Sizing, Industry & Company Research.">
-
 <style>
+
+/* =========================================================
+   EUROPEAN EDITORIAL / CONSULTING DESIGN SYSTEM
+   ========================================================= */
+
 :root{
-  --ink:#172033;
-  --muted:#5f6b7a;
-  --line:#e6eaf0;
-  --soft:#f5f7fa;
-  --accent:#2457d6;
+  --ink:#172437;
+  --navy:#10243e;
+  --blue:#2457d6;
+  --blue-soft:#eaf0fb;
+  --muted:#647184;
+  --line:#dfe5ec;
+  --soft:#f4f6f8;
+  --paper:#fbfaf7;
+  --white:#ffffff;
 }
 
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
   color:var(--ink);
-  background:#fff;
+
+  background:
+    linear-gradient(
+      rgba(251,250,247,.96),
+      rgba(251,250,247,.96)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 47px,
+      rgba(16,36,62,.035) 48px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 47px,
+      rgba(16,36,62,.035) 48px
+    );
+
   line-height:1.65;
 }
 
+
+/* =========================================================
+   EUROPEAN CONTAINER
+   ========================================================= */
+
 .container{
-  max-width:1050px;
+  max-width:1120px;
   margin:auto;
-  padding:0 28px;
+  padding:0 32px;
 }
 
-/* NAVIGATION */
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 nav{
   position:sticky;
   top:0;
-  z-index:10;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
+  z-index:100;
+
+  background:
+    rgba(251,250,247,.92);
+
+  backdrop-filter:blur(16px);
+
+  border-bottom:
+    1px solid rgba(16,36,62,.12);
 }
 
 .nav-inner{
-  height:64px;
+  height:70px;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
 .brand{
+  color:var(--navy);
+
+  font-size:15px;
   font-weight:750;
+
   letter-spacing:.2px;
 }
 
 nav a{
-  color:var(--muted);
+  color:#536174;
+
   text-decoration:none;
-  margin-left:24px;
-  font-size:14px;
+
+  margin-left:28px;
+
+  font-size:13px;
+  font-weight:600;
+
+  transition:.2s ease;
 }
 
 nav a:hover{
-  color:var(--accent);
+  color:var(--blue);
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO — EUROPEAN CONSULTING STYLE
+   ========================================================= */
 
 .hero{
-  padding:92px 0 78px;
+  position:relative;
+
+  padding:115px 0 105px;
+
+  overflow:hidden;
+
   background:
-    linear-gradient(135deg,#f7f9fc 0%,#fff 62%);
-  border-bottom:1px solid var(--line);
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(36,87,214,.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(16,36,62,.045),
+      transparent 30%
+    ),
+    var(--paper);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+
+/* subtle architectural lines */
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  right:0;
+
+  width:48%;
+  height:100%;
+
+  opacity:.45;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 69px,
+      rgba(16,36,62,.045) 70px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 69px,
+      rgba(16,36,62,.045) 70px
+    );
+
+  pointer-events:none;
+}
+
+
+/* small European-style coordinate marker */
+
+.hero::after{
+  content:"50°N 10°E";
+
+  position:absolute;
+
+  right:45px;
+  bottom:35px;
+
+  font-size:10px;
+  letter-spacing:2px;
+
+  color:rgba(16,36,62,.25);
+
+  font-weight:700;
+}
+
+
+.hero .container{
+  position:relative;
+  z-index:2;
 }
 
 .eyebrow{
-  color:var(--accent);
-  font-size:13px;
-  font-weight:750;
+  color:var(--blue);
+
+  font-size:12px;
+  font-weight:800;
+
   text-transform:uppercase;
-  letter-spacing:1.7px;
+
+  letter-spacing:2px;
 }
 
 h1{
-  font-size:clamp(42px,7vw,70px);
-  line-height:1.05;
-  margin:16px 0 18px;
-  letter-spacing:-2.4px;
+  font-size:
+    clamp(45px,7vw,76px);
+
+  line-height:1.02;
+
+  margin:18px 0 22px;
+
+  letter-spacing:-3px;
+
+  color:var(--navy);
+
+  font-weight:750;
 }
 
 .hero h2{
   font-size:22px;
-  line-height:1.35;
-  font-weight:550;
-  color:#344054;
-  max-width:820px;
-  margin:0 0 25px;
+
+  line-height:1.45;
+
+  font-weight:500;
+
+  color:#34445a;
+
+  max-width:850px;
+
+  margin:0 0 28px;
 }
 
 .hero p{
   max-width:760px;
+
   color:var(--muted);
+
   font-size:17px;
+
+  line-height:1.8;
 }
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .buttons{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
-  margin-top:28px;
+
+  margin-top:32px;
 }
 
 .btn{
   display:inline-block;
-  padding:11px 18px;
-  border-radius:9px;
+
+  padding:12px 20px;
+
+  border-radius:3px;
+
   text-decoration:none;
+
   font-weight:650;
-  font-size:14px;
-  border:1px solid var(--line);
+
+  font-size:13px;
+
+  letter-spacing:.2px;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    color .2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn.primary{
-  background:var(--ink);
+  background:var(--navy);
+
   color:white;
-  border-color:var(--ink);
+
+  border:
+    1px solid var(--navy);
+}
+
+.btn.primary:hover{
+  background:var(--blue);
+
+  border-color:var(--blue);
 }
 
 .btn.secondary{
-  background:white;
-  color:var(--ink);
+  background:transparent;
+
+  color:var(--navy);
+
+  border:
+    1px solid #bcc6d2;
 }
 
-/* SECTIONS */
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 section{
-  padding:72px 0;
-  border-bottom:1px solid var(--line);
+  position:relative;
+
+  padding:85px 0;
+
+  background:rgba(255,255,255,.72);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+section:nth-of-type(even){
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244,246,248,.72),
+      rgba(251,250,247,.72)
+    );
 }
 
 .section-label{
-  font-size:12px;
-  color:var(--accent);
+  font-size:11px;
+
+  color:var(--blue);
+
   font-weight:800;
+
   text-transform:uppercase;
-  letter-spacing:1.5px;
+
+  letter-spacing:2px;
 }
 
 h3{
-  font-size:30px;
+  font-size:34px;
+
   line-height:1.2;
-  margin:10px 0 26px;
-  letter-spacing:-.8px;
+
+  margin:12px 0 30px;
+
+  letter-spacing:-1px;
+
+  color:var(--navy);
 }
 
 .about{
   font-size:18px;
-  color:#3f4b5c;
-  max-width:850px;
+
+  color:#425066;
+
+  max-width:870px;
+
+  line-height:1.85;
 }
 
-/* TAGS */
+
+/* =========================================================
+   TAGS
+   ========================================================= */
 
 .tags{
   display:flex;
-  gap:9px;
+
+  gap:8px;
+
   flex-wrap:wrap;
 }
 
 .tag{
-  background:var(--soft);
-  border:1px solid var(--line);
-  padding:7px 11px;
-  border-radius:999px;
-  font-size:13px;
-  color:#435065;
+  background:#f5f7fa;
+
+  border:
+    1px solid #dce3eb;
+
+  padding:7px 12px;
+
+  border-radius:3px;
+
+  font-size:12px;
+
+  color:#46556a;
 }
 
-/* PROJECTS */
+
+/* =========================================================
+   STANDARD PROJECTS
+   ========================================================= */
 
 .project{
-  padding:25px 0;
-  border-top:1px solid var(--line);
+  padding:30px 0;
+
+  border-top:
+    1px solid var(--line);
 }
 
 .project:first-of-type{
@@ -193,31 +430,250 @@ h3{
 }
 
 .project h4{
-  font-size:20px;
+  font-size:21px;
+
   margin:0 0 5px;
+
+  color:var(--navy);
 }
 
 .project .meta{
-  font-size:13px;
-  color:var(--accent);
-  font-weight:700;
-  margin-bottom:10px;
+  font-size:12px;
+
+  color:var(--blue);
+
+  font-weight:750;
+
+  letter-spacing:.3px;
+
+  margin-bottom:12px;
 }
 
 .project p{
   color:var(--muted);
+
   margin:0;
-  max-width:900px;
+
+  max-width:920px;
 }
 
-/* EXPERIENCE */
+
+/* =========================================================
+   FEATURED PROJECT
+   ========================================================= */
+
+.project-featured{
+  padding:38px 0 45px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.project-featured h4{
+  font-size:27px;
+
+  line-height:1.3;
+
+  margin:0 0 8px;
+
+  color:var(--navy);
+
+  letter-spacing:-.5px;
+}
+
+.project-featured .meta{
+  font-size:12px;
+
+  color:var(--blue);
+
+  font-weight:800;
+
+  letter-spacing:.5px;
+
+  margin-bottom:20px;
+}
+
+.project-intro{
+  color:#536174;
+
+  font-size:16px;
+
+  line-height:1.8;
+
+  max-width:900px;
+
+  margin-bottom:28px;
+}
+
+.project-label{
+  font-size:11px;
+
+  color:var(--blue);
+
+  font-weight:850;
+
+  text-transform:uppercase;
+
+  letter-spacing:1.8px;
+
+  margin:30px 0 12px;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+.project-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:16px;
+
+  margin:24px 0;
+}
+
+.project-box{
+  background:
+    rgba(255,255,255,.82);
+
+  border:
+    1px solid #dfe5ec;
+
+  border-radius:4px;
+
+  padding:21px;
+
+  box-shadow:
+    0 4px 18px rgba(16,36,62,.025);
+}
+
+.project-box strong{
+  display:block;
+
+  font-size:13px;
+
+  color:var(--navy);
+
+  margin-bottom:7px;
+}
+
+.project-box span{
+  color:#687589;
+
+  font-size:13px;
+
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+   ========================================================= */
+
+.project-list{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:7px 38px;
+
+  padding-left:20px;
+
+  margin-top:8px;
+}
+
+.project-list li{
+  margin:5px 0;
+
+  color:#5b6879;
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT
+   ========================================================= */
+
+.project-impact{
+  background:
+    linear-gradient(
+      135deg,
+      #f1f4f8,
+      #fafbf9
+    );
+
+  border-left:
+    3px solid var(--blue);
+
+  border-radius:2px;
+
+  padding:22px 25px;
+
+  margin-top:28px;
+}
+
+.project-impact strong{
+  display:block;
+
+  color:var(--navy);
+
+  margin-bottom:7px;
+}
+
+.project-impact p{
+  margin:0;
+
+  color:#46556a;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   CONFIDENTIALITY NOTE
+   ========================================================= */
+
+.confidential-note{
+  margin-top:25px;
+
+  padding:13px 16px;
+
+  border:
+    1px solid #dfe5ec;
+
+  border-radius:3px;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+  color:#788496;
+
+  background:
+    rgba(247,248,250,.8);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
 
 .experience{
   display:grid;
-  grid-template-columns:180px 1fr;
-  gap:35px;
-  padding:25px 0;
-  border-top:1px solid var(--line);
+
+  grid-template-columns:190px 1fr;
+
+  gap:40px;
+
+  padding:28px 0;
+
+  border-top:
+    1px solid var(--line);
 }
 
 .experience:first-of-type{
@@ -225,639 +681,201 @@ h3{
 }
 
 .date{
-  color:var(--muted);
-  font-size:14px;
+  color:#778396;
+
+  font-size:13px;
+
+  font-weight:550;
 }
 
 .experience h4{
   margin:0 0 4px;
-  font-size:19px;
+
+  font-size:20px;
+
+  color:var(--navy);
 }
 
 .company{
-  font-weight:700;
+  font-weight:750;
+
+  color:#34445a;
 }
 
-ul{
-  padding-left:20px;
-  color:var(--muted);
+.experience ul{
+  margin-top:15px;
 }
 
-li{
-  margin:8px 0;
-}
 
-/* QUOTE */
+/* =========================================================
+   QUOTE / PHILOSOPHY
+   ========================================================= */
 
 .quote{
-  background:var(--soft);
-  border-radius:16px;
-  padding:30px;
+  position:relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0f3f7,
+      #fafbf9
+    );
+
+  border:
+    1px solid #dce3eb;
+
+  border-radius:4px;
+
+  padding:38px 42px;
+
   font-size:21px;
-  line-height:1.5;
-  color:#344054;
+
+  line-height:1.6;
+
+  color:#34445a;
+
+  box-shadow:
+    0 8px 30px rgba(16,36,62,.025);
 }
 
-/* FOOTER */
+.quote::before{
+  content:"“";
+
+  display:block;
+
+  font-size:50px;
+
+  line-height:.7;
+
+  color:var(--blue);
+
+  margin-bottom:15px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+#contact{
+  background:
+    linear-gradient(
+      135deg,
+      #f2f4f7,
+      #fbfaf7
+    );
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer{
-  padding:42px 0;
-  color:var(--muted);
-  font-size:13px;
+  padding:45px 0;
+
+  color:#788496;
+
+  font-size:12px;
+
+  background:#f1f3f5;
+
+  border-top:
+    1px solid var(--line);
 }
 
-/* MOBILE */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:760px){
+
+  .container{
+    padding:0 22px;
+  }
 
   nav .links{
     display:none;
   }
 
   .hero{
-    padding:65px 0;
+    padding:75px 0 70px;
+  }
+
+  .hero::after{
+    right:20px;
+    bottom:20px;
   }
 
   section{
-    padding:55px 0;
+    padding:60px 0;
+  }
+
+  h1{
+    font-size:48px;
+
+    letter-spacing:-2px;
+  }
+
+  h3{
+    font-size:28px;
   }
 
   .experience{
     grid-template-columns:1fr;
+
     gap:8px;
   }
 
-  h1{
-    letter-spacing:-1.5px;
+  .project-grid,
+  .project-list{
+    grid-template-columns:1fr;
   }
+
+  .project-featured h4{
+    font-size:23px;
+  }
+
+  .quote{
+    padding:28px;
+    font-size:18px;
+  }
+
 }
+
+
+/* =========================================================
+   SUBTLE EUROPEAN SELECTION
+   ========================================================= */
+
+::selection{
+  background:#dce6fb;
+
+  color:var(--navy);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#f1f3f5;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#b8c2cf;
+
+  border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#8f9baa;
+}
+
 </style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<div class="container nav-inner">
-
-<div class="brand">
-Alistair Arokiaswamy
-</div>
-
-<div class="links">
-
-<a href="#about">About</a>
-
-<a href="#expertise">Expertise</a>
-
-<a href="#projects">Projects</a>
-
-<a href="#experience">Experience</a>
-
-<a href="#contact">Contact</a>
-
-</div>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
-<div class="container">
-
-<div class="eyebrow">
-Market Research • Competitive Intelligence • Strategic Research
-</div>
-
-<h1>
-Alistair Arokiaswamy
-</h1>
-
-<h2>
-Market Research & Competitive Intelligence |
-Market Sizing |
-Industry & Company Research |
-Independent Consultant
-</h2>
-
-<p>
-I help businesses turn fragmented information into structured,
-evidence-based market intelligence — covering markets,
-competitors, companies, industries and business opportunities.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#contact">
-Get in touch
-</a>
-
-<a class="btn secondary" href="#projects">
-View selected projects
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- EXPERTISE -->
-
-<section id="expertise">
-
-<div class="container">
-
-<div class="section-label">
-Core Expertise
-</div>
-
-<h3>
-Research built around business questions
-</h3>
-
-<div class="tags">
-
-<span class="tag">
-Market Sizing & Forecasting
-</span>
-
-<span class="tag">
-Competitive Intelligence
-</span>
-
-<span class="tag">
-Company & Competitor Research
-</span>
-
-<span class="tag">
-Industry Analysis
-</span>
-
-<span class="tag">
-Market & Country Research
-</span>
-
-<span class="tag">
-Customer / Supplier Mapping
-</span>
-
-<span class="tag">
-Data Collection & Validation
-</span>
-
-<span class="tag">
-Opportunity Assessment
-</span>
-
-<span class="tag">
-Market Entry Research
-</span>
-
-<span class="tag">
-Commercial Research
-</span>
-
-<span class="tag">
-Due-Diligence Support
-</span>
-
-<span class="tag">
-Research Reports & Presentations
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-label">
-About
-</div>
-
-<h3>
-Good research is not just about finding information.
-</h3>
-
-<div class="about">
-
-<p>
-It is about figuring out what actually matters.
-</p>
-
-<p>
-My work spans market research, competitive intelligence,
-market sizing, company research, industry analysis,
-data validation and strategic research assignments.
-I enjoy taking scattered information and turning it into
-a clearer picture of a market, competitor, company or opportunity.
-</p>
-
-<p>
-Typical questions I work around include:
-</p>
-
-<ul>
-
-<li>
-How large is the market and where is growth coming from?
-</li>
-
-<li>
-Who are the important competitors and how are they positioned?
-</li>
-
-<li>
-Which companies, customers, suppliers and market participants matter?
-</li>
-
-<li>
-What is changing in the industry and why?
-</li>
-
-<li>
-Which markets, products or opportunities deserve a closer look?
-</li>
-
-<li>
-What do we know with confidence — and what still needs validation?
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<div class="container">
-
-<div class="section-label">
-Selected Projects
-</div>
-
-<h3>
-Recent research work
-</h3>
-
-
-<div class="project">
-
-<h4>
-Integrated MMF Textile & Apparel Park — West Bengal
-</h4>
-
-<div class="meta">
-Pre-feasibility Market & Commercial Assessment
-</div>
-
-<p>
-Supported a pre-feasibility assessment for a proposed
-~₹10,000 crore integrated textile ecosystem, analysing
-global and Indian MMF demand, product and SKU opportunities,
-export potential, demand-supply dynamics, competitor
-benchmarking, raw-material integration, logistics,
-industrial ecosystem readiness and preliminary commercial viability.
-</p>
-
-</div>
-
-
-<div class="project">
-
-<h4>
-Green Building & Sustainability Consulting — India
-</h4>
-
-<div class="meta">
-Market Sizing • Competitive Landscape • Business Model Analysis
-</div>
-
-<p>
-Assessed the Indian sustainability and green-building consulting
-market, including market sizing and forecasting through 2030,
-service-level segmentation, competitive landscape, market maturity,
-pricing structures, engagement models, certification capabilities,
-project footprint and domestic versus overseas exposure.
-</p>
-
-</div>
-
-
-<div class="project">
-
-<h4>
-Micronized Melamine — US Market
-</h4>
-
-<div class="meta">
-Market Sizing • Segmentation • Value Chain • Competitive Intelligence
-</div>
-
-<p>
-Analysed the US micronized melamine market across end-use
-applications, functional roles, particle-size grades, competing
-additives, producers, formulators, end users and value-chain
-dynamics, including market drivers, restraints, opportunities
-and challenges.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<div class="container">
-
-<div class="section-label">
-Experience
-</div>
-
-<h3>
-Professional background
-</h3>
-
-
-<div class="experience">
-
-<div class="date">
-Jan 2026 — Present
-</div>
-
-<div>
-
-<h4>
-Senior Research Analyst
-</h4>
-
-<div class="company">
-MarketsandMarkets
-</div>
-
-<ul>
-
-<li>
-Conduct market research and competitive intelligence across
-chemicals, materials, sustainability, textiles and other
-industrial markets.
-</li>
-
-<li>
-Develop market sizing, segmentation, company profiles,
-competitor benchmarks and industry analyses.
-</li>
-
-<li>
-Translate complex market information into client-ready insights
-supporting strategy, market entry, expansion, positioning and
-investment-related decisions.
-</li>
-
-<li>
-Perform structured secondary research, data collection,
-validation and synthesis using company disclosures,
-industry sources and research databases.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-Aug 2025 — Jan 2026
-</div>
-
-<div>
-
-<h4>
-Senior Enterprise Expansion Strategist
-</h4>
-
-<div class="company">
-MarketsandMarkets
-</div>
-
-<ul>
-
-<li>
-Supported enterprise-focused research around market expansion,
-strategic opportunities, competitive landscapes and growth decisions.
-</li>
-
-<li>
-Translated market and company intelligence into structured
-strategic inputs for senior stakeholders.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-Oct 2024 — Aug 2025
-</div>
-
-<div>
-
-<h4>
-Strategic Operations & Market Expansion Analyst
-</h4>
-
-<div class="company">
-Allstate
-</div>
-
-<ul>
-
-<li>
-Analysed market dynamics, expansion opportunities,
-regulatory considerations and operational readiness.
-</li>
-
-<li>
-Supported data synthesis, due-diligence research,
-market-entry analysis and stakeholder decision-making.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-Dec 2021 — May 2023
-</div>
-
-<div>
-
-<h4>
-Sr. Lead Generation Executive
-</h4>
-
-<div class="company">
-iResearch Services
-</div>
-
-<ul>
-
-<li>
-Managed lead-generation activities, research data verification,
-reporting and team-level targets.
-</li>
-
-<li>
-Worked with structured business data to support prospect
-identification and outreach.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RESEARCH APPROACH -->
-
-<section>
-
-<div class="container">
-
-<div class="quote">
-
-“Good research isn't about collecting the largest possible
-amount of information. The real value is knowing which
-information matters, how reliable it is, and what it means
-for the decision being considered.”
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="section-label">
-Contact
-</div>
-
-<h3>
-Let's talk research.
-</h3>
-
-<p class="about">
-
-If you're evaluating a market, competitor, company,
-product, geography or business opportunity,
-feel free to connect.
-
-</p>
-
-<div class="buttons">
-
-<a
-class="btn primary"
-href="https://www.linkedin.com/in/alistair-arokiaswamy-778a7811a/"
-target="_blank"
-rel="noopener">
-LinkedIn
-</a>
-
-<a
-class="btn secondary"
-href="mailto:alistairarokiaswamy2@icloud.com">
-Email me
-</a>
-
-<a
-class="btn secondary"
-href="tel:+919561853423">
-📞 +91 9561853423
-</a>
-
-</div>
-
-<p style="color:#8a94a3;font-size:13px;margin-top:18px">
-
-Email:
-alistairarokiaswamy2@icloud.com
-
-<br>
-
-Phone:
-+91 9561853423
-
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-© 2026 Alistair Arokiaswamy ·
-Market Research & Competitive Intelligence
-
-</div>
-
-</footer>
-
-
-</body>
-</html>
